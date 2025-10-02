@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Витамин против Бактерий - Платформерная игра</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="game-wrapper">
+            <div class="game-header">
+                <h1>Витамин против Бактерий</h1>
+                <div class="game-stats">
+                    <div class="score">
+                        <span>Собрано ресурсов: </span>
+                        <span id="score">0</span>
+                        <span> из </span>
+                        <span id="total">6</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="game-container">
+                <canvas id="gameCanvas" width="800" height="600"></canvas>
+                <div class="game-overlay hidden" id="gameOverlay">
+                    <div class="overlay-content">
+                        <h2 id="overlayTitle">Поздравляем!</h2>
+                        <p id="overlayMessage">Вы собрали все ресурсы!</p>
+                        <button class="btn btn--primary btn--lg" id="restartBtn">Попробовать снова</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="game-controls">
+                <p><strong>Управление:</strong></p>
+                <p>← → стрелки - движение влево/вправо</p>
+                <p>↑ стрелка или ПРОБЕЛ - прыжок</p>
+                <p><strong>Цель:</strong> Соберите все ресурсы, избегая опасных бактерий!</p>
+                <p class="warning">⚠️ При столкновении с бактерией персонаж умирает!</p>
+            </div>
+        </div>
+    </div>
+    
+    <script src="app.js"></script>
+</body>
+</html>
